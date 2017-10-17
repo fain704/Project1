@@ -4,84 +4,201 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Untitled</title>
+        <title>Next Generation Health</title>
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="author" href="humans.txt">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 
     </head>
     <body>
-        <h1>The Future You</h1>
+
+
+        <h1>Next Generation Health</h1>
+
+        <!-- Dropdown Calories Count Menu -->
+
+        <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+        <!-- End Dropdown Calories Count Menu -->
 
           <!-- Multi Dropdown Menu -->
           <div class="form-group">
-    <label class="col-md-4 control-label" for="rolename">Role Name</label>
-    <div class="col-md-4">
-        <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
-            <option value="cheese">Cheese</option>
-            <option value="tomatoes">Tomatoes</option>
-            <option value="mozarella">Mozzarella</option>
-            <option value="mushrooms">Mushrooms</option>
-            <option value="pepperoni">Pepperoni</option>
-            <option value="onions">Onions</option>
-        </select>
-    </div>
-</div>
+            <label class="col-md-4 control-label" for="rolename">Alergies</label>
+            <div class="col-md-4">
+                <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
+                    <option value="Peanut">Peanut</option>
+                    <option value="Soy">Soy</option>
+                    <option value="Egg Whites">Egg Whites</option>
+                    <option value="Milk">Milk</option>
+                    <option value="Gluten">Gluten</option>
+                    <option value="Yeast">Yeast</option>
+                    <option value="CashewNut">Cashew Nut</option>
+                    <option value="EggYolk">Egg Yolk</option>
+                    <option value="Garlic">Garlic</option>
+                    <option value="SoyBean">Soy Bean</option>
+                    <option value="BrazilNut">Brazil Nut</option>
+                    <option value="Almonds">Almonds</option>
+                    <option value="Corn">Corn</option>
+                    <option value="HazelNut">Hazel Nut</option>
+                    <option value="Oats">Oats</option>
+                    <option value="Lentils">Lentils</option>
+                    <option value="KiwiFruit">Kiwi Fruit</option>
+                    <option value="ChilliPeppers">Chilli Peppers</option>
+                    <option value="SesameSeed">Sesame Seed</option>
+                    <option value="SunflowerSeed">Sunflower Seed</option>
+
+
+
+                </select>
+            </div>
+        </div>
+
+                    <!-- Multi DropDwon End -->
+
+                    <!-- Multi DropDown Start Diets -->
+
+                              <div class="form-group">
+            <label class="col-md-4 control-label" for="rolename">Alergies</label>
+            <div class="col-md-4">
+                <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
+                    <option value="Peanut">Peanut</option>
+                    <option value="Soy">Soy</option>
+                    <option value="Egg Whites">Egg Whites</option>
+                    <option value="Milk">Milk</option>
+                    <option value="Gluten">Gluten</option>
+                    <option value="Yeast">Yeast</option>
+                    <option value="CashewNut">Cashew Nut</option>
+                    <option value="EggYolk">Egg Yolk</option>
+                    <option value="Garlic">Garlic</option>
+                    <option value="SoyBean">Soy Bean</option>
+                    <option value="BrazilNut">Brazil Nut</option>
+                    <option value="Almonds">Almonds</option>
+                    <option value="Corn">Corn</option>
+                    <option value="HazelNut">Hazel Nut</option>
+                    <option value="Oats">Oats</option>
+                    <option value="Lentils">Lentils</option>
+                    <option value="KiwiFruit">Kiwi Fruit</option>
+                    <option value="ChilliPeppers">Chilli Peppers</option>
+                    <option value="SesameSeed">Sesame Seed</option>
+                    <option value="SunflowerSeed">Sunflower Seed</option>
+
+
+
+                </select>
+            </div>
+        </div>
+
+        <!-- Multi DropDown Diets End -->
+
+
+        <!-- Dropdown Link -->
+
+        <div class=“dropdown show”>
+          <a class=“btn btn-secondary dropdown-toggle” href=“https://example.com” id=“dropdownMenuLink” data-toggle=“dropdown” aria-haspopup=“true” aria-expanded=“false”>
+            Dropdown link
+          </a>
+
+         <div class=“dropdown-menu” aria-labelledby=“dropdownMenuLink”>
+            <a class=“dropdown-item” href=“#”>Action</a>
+            <a class=“dropdown-item” href=“#”>Another action</a>
+            <a class=“dropdown-item” href=“#”>Something else here</a>
+          </div>
+        </div>
 
 
 
 
-        <!-- Dropdown Menu -->
+        <div class="dropdown" style="float:left;">
+          <button class="dropbtn">Calories</button>
+          <div class="dropdown-content" style="left:0;">
+            <a href="#">1000</a>
+            <a href="#">1100</a>
+            <a href="#">1200</a>
+            <a href="#">1300</a>
+            <a href="#">1400</a>
+            <a href="#">1500</a>
+            <a href="#">1600</a>
+            <a href="#">1700</a>
+            <a href="#">1800</a>
+            <a href="#">1900</a>
+            <a href="#">2000</a>
+            <a href="#">2100</a>
+            <a href="#">2200</a>
+            <a href="#">2300</a>
+            <a href="#">2400</a>
+            <a href="#">2600</a>
+            <a href="#">2700</a>
+            <a href="#">2800</a>
+            <a href="#">2900</a>
+            <a href="#">3000</a>
+            <a href="#">3100</a>
+            <a href="#">3200</a>
+            <a href="#">3300</a>
+            <a href="#">3400</a>
+            <a href="#">3500</a>
+            <a href="#">3600</a>
+            <a href="#">3700</a>
+            <a href="#">3800</a>
+            <a href="#">3900</a>
+            <a href="#">4000</a>
+          </div>
+        </div>
+        <!-- End Dropdown Link -->
 
-<div class=“dropdown show”>
-  <a class=“btn btn-secondary dropdown-toggle” href=“https://example.com” id=“dropdownMenuLink” data-toggle=“dropdown” aria-haspopup=“true” aria-expanded=“false”>
-    Dropdown link
-  </a>
-
- <div class=“dropdown-menu” aria-labelledby=“dropdownMenuLink”>
-    <a class=“dropdown-item” href=“#”>Action</a>
-    <a class=“dropdown-item” href=“#”>Another action</a>
-    <a class=“dropdown-item” href=“#”>Something else here</a>
-  </div>
-</div>
-
-        <!-- End Dropdown Menu -->
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/javaScript/main.js"></script>
-<script src="assets/Backend.js"></script>
-<script type="text">
-        $(document).ready(function() {
-        $('.multiselect-ui').multiselect({
-            onChange: function(option, checked) {
-                // Get selected options.
-                var selectedOptions = $('.multiselect-ui option:selected');
- 
-                if (selectedOptions.length >= 4) {
-                    // Disable all other checkboxes.
-                    var nonSelectedOptions = $('.multiselect-ui option').filter(function() {
-                        return !$(this).is(':selected');
-                    });
- 
-                    nonSelectedOptions.each(function() {
-                        var input = $('input[value="' + $(this).val() + '"]');
-                        input.prop('disabled', true);
-                        input.parent('li').addClass('disabled');
-                    });
-                }
-                else {
-                    // Enable all checkboxes.
-                    $('.multiselect-ui option').each(function() {
-                        var input = $('input[value="' + $(this).val() + '"]');
-                        input.prop('disabled', false);
-                        input.parent('li').addClass('disabled');
-                    });
-                }
-            }
-        });
-    });
-</script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="assets/javaScript/main.js"></script>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function() {
+
+
+                $('.multiselect-ui').multiselect({
+                    onChange: function(option, checked) {
+                        // Get selected options.
+                        var selectedOptions = $('.multiselect-ui option:selected',this);
+
+
+                            $('.multiselect-ui option', this).each(function() {
+                                var input = $('input[value="' + $(this).val() + '"]',this);
+                                input.prop('disabled', false);
+                                input.parent('li').addClass('disabled');
+                            });
+                    }
+                });
+
+            });
+
+
+        </script>
+
     </body>
 </html>
