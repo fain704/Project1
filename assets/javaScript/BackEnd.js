@@ -74,4 +74,59 @@ firebase.auth().signOut().then(function() {
   // An error happened.
 });
 
-$("#signin").on("click",Auth)
+//authorize user or add user.
+Auth();
+
+
+
+
+
+//Meal Plan API Call works
+var diet = $("#diet").val().trim();
+var exclude = $("#exclude").val().trim();
+var calories = 2000;
+var duration = $("#duration");
+var firstqueryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet='+diet+'&exclude='+exclude+'&calories='+calories+'&duration='+duration;
+
+
+$.ajax({
+      url: firstqueryURL,
+      method: "GET",
+      dataType :'json',
+      contentType:'application/json',
+      headers: {
+        'X-MashApe-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
+        'Accept': 'application/json',
+      }
+    }).done(function(response) {
+      console.log(response);
+    });
+
+
+
+var id = 247056; //will be dynamic
+var secondqueryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/informationBulk?ids="+id;
+$.ajax({
+  url: secondqueryURL,
+  method: "GET",
+  dataType :'json',
+  contentType:'application/json',
+  headers: {
+    'X-Mashape-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
+    'Accept': 'application/json'
+  }
+}).done(function(response) {
+  console.log(response);
+});
+
+//"http://api.walmartlabs.com/v1/items/12417832?apiKey=ybnhuvuf44ajn4txptrpedm4&lsPublisherId={Your LinkShare Publisher Id}&format=json"
+
+var thirdqueryURL = "http://api.walmartlabs.com/v1/items?ids="+ ingridientsConcat +"&apiKey=ybnhuvuf44ajn4txptrpedm4";
+
+$.ajax({
+  url = thirdqueryURL,
+  method:"GET"
+}).done(function(response) {
+  console.log(response);
+});
+
