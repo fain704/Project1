@@ -4,12 +4,55 @@ h1{
 		text-align: center;
 
 }
-body > div:nth-child(2) > div > span > div > button {
-	background-color: #4CAF50;
+body{
+     margin: 0;
+     background: url(PUT URL ADDRESS HERE!!!!!);
+     background-size: 1440px 800px;
+     background-repeat:no-repeatdisplay: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
+.dropdown-custom  button{
+	background-color: #4CAF50;
+	color: white;
+	width:300px;
+	height:100%;
+	position:relative;
+	display: block; margin: 0 auto;
+}
+
+.dropdown-label {
+	width: 100%;
+	text-align: center;
+}
+
+.dropdown-custom:hover button{
+    background-color: #3e8e41;
+		color: white;
+}
+
+.dropdown-custom:hover.multiselect.btn {
+    display: block;
+}
+
+/*body > div:nth-child(2) > div > span > div > button {
+	background-color: #4CAF50;
+	color: white;
+  width:300px;
+  height:100%;
+  position:relative;
+	display: block; margin: 0 auto;
+}
+
 body > div:nth-child(3) > div > span > div > button {
 	background-color: #4CAF50;
-}
+	color: white;
+	width:300px;
+	height:100%;
+	position:relative;
+	text-align: center;
+	display: block; margin: 0 auto;
+}*/
 
 span.multiselect-native-select {
 	position: relative
@@ -28,7 +71,7 @@ span.multiselect-native-select select {
 
 }
 .multiselect-container {
-	position: absolute;
+	position: relative;
 	list-style-type: none;
 	margin: 0;
 	padding: 0
@@ -90,7 +133,8 @@ span.multiselect-native-select select {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+		width 100%;
+		text-align: center;
 }
 
 .dropdown-content {
