@@ -4,14 +4,20 @@ h1{
 		text-align: center;
 
 }
-body{
+/*body{
      margin: 0;
-     background: url(PUT URL ADDRESS HERE!!!!!);
+     background: url("nextGenHealthBackground.jpg");
      background-size: 1440px 800px;
      background-repeat:no-repeatdisplay: compact;
      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+}*/
+
+body {
+	background-image: url("nextGenHealthBackground.jpg");
+	background-color: #CDEED1;
 }
+
 .dropdown-custom  button{
 	background-color: #4CAF50;
 	color: white;
@@ -164,5 +170,59 @@ span.multiselect-native-select select {
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+
+}
+
+.weekbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dayWeek {
+    position: relative;
+		width 100%;
+		text-align: center;
+}
+
+.dayWeek-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+		height:500px;
+		overflow-x:scroll;
+}
+
+.dayWeek-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dayWeek-content a:hover {background-color: #f1f1f1}
+
+.dayWeek:hover .dayWeek-content {
+    display: block;
+}
+
+.dayWeek:hover .weekbtn {
+    background-color: #3e8e41;
+
+}
+
+.submitBtn {
+    background-color: #66AACC;
+		color: white;
+		padding: 12px 16px;
+		position: absolute;
+		right: 0;
 
 }
