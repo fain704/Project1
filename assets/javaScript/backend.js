@@ -74,7 +74,7 @@ firebase.auth().signOut().then(function() {
   // An error happened.
 });
 
-$("#signin").on("click",Auth)
+$("submit").on("click",Auth)
 
 //*************************************Working Code Below Don't Change***********************************************************
 ////values hard coded that will be used for food-recipe-nutrition api calls
@@ -398,44 +398,44 @@ $("#signin").on("click",Auth)
 
 
 //initialiaze value for grocery list
-var groceryList = [];
+// var groceryList = [];
 
-//loop through ingredients of each firebase recipe object and add to the array if it doesn't already exist or if the ingredient is water.
-for (let i = 0; i < firebaseMealObject.length; i++) {
-  for (let j = 0; j < firebaseMealObject[i].ingredients.length; j++) {
+// //loop through ingredients of each firebase recipe object and add to the array if it doesn't already exist or if the ingredient is water.
+// for (let i = 0; i < firebaseMealObject.length; i++) {
+//   for (let j = 0; j < firebaseMealObject[i].ingredients.length; j++) {
 
-    if (groceryList.indexOf(firebaseMealObject[i].ingredients[j].name) === -1 && firebaseMealObject[i].ingredients[j].name !=="water"){
+//     if (groceryList.indexOf(firebaseMealObject[i].ingredients[j].name) === -1 && firebaseMealObject[i].ingredients[j].name !=="water"){
 
-      groceryList[(j*i)+j] = firebaseMealObject[i].ingredients[j].name;
-      console.log(groceryList[j]);
+//       groceryList[(j*i)+j] = firebaseMealObject[i].ingredients[j].name;
+//       console.log(groceryList[j]);
 
-    }
+//     }
 
-  }
-}
-//filters grocery list so that undefined index values are removed
-groceryList = groceryList.filter(i=>i);
+//   }
+// }
+// //filters grocery list so that undefined index values are removed
+// groceryList = groceryList.filter(i=>i);
 
 
-var i = 0;
+// var i = 0;
 
-walmart(groceryList[i]);
-console.log("length",groceryList);
+// walmart(groceryList[i]);
+// console.log("length",groceryList);
 
-function product(data){
-  console.log(data);
-  if(++i < groceryList.length) {
-    walmart(groceryList[i]);
-  }
-}
+// function product(data){
+//   console.log(data);
+//   if(++i < groceryList.length) {
+//     walmart(groceryList[i]);
+//   }
+// }
 
-function walmart(name){
+// function walmart(name){
 
-  var thirdqueryURL = "http://api.walmartlabs.com/v1/search?format=json&callback=product&apiKey=ybnhuvuf44ajn4txptrpedm4&query="+name;
+//   var thirdqueryURL = "http://api.walmartlabs.com/v1/search?format=json&callback=product&apiKey=ybnhuvuf44ajn4txptrpedm4&query="+name;
 
-  $.ajax({
-    url: thirdqueryURL,
-    method:"GET",
-    dataType: "jsonp"
-  });
-};
+//   $.ajax({
+//     url: thirdqueryURL,
+//     method:"GET",
+//     dataType: "jsonp"
+//   });
+// };
