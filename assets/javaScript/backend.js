@@ -33,7 +33,7 @@ firebase.auth().getRedirectResult().then(function (result) {
                     
                    database.ref("users/"+(currentUser.uid)).once("value", function (snapshot) {
                         var userData = snapshot.val();
-                        console.log(userData);
+                        //console.log(userData);
                         if (!userData) {
                             currentUser = new User(currentUser.uid, currentUser.displayName, currentUser.email);
                             database.ref("users/"+(currentUser.uid)).update(currentUser);
@@ -74,87 +74,87 @@ firebase.auth().signOut().then(function() {
   // An error happened.
 });
 
-$("submit").on("click",Auth)
+$("#login").on("click",Auth)
 
 //*************************************Working Code Below Don't Change***********************************************************
-////values hard coded that will be used for food-recipe-nutrition api calls
-// var diet = "vegan";
-// var exclude = "dairy";
-// var calories = 2000;
-// var duration = "day";
-////build api Query Url with hard coded search criteria
-// var firstqueryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet='+diet+'&exclude='+exclude+'&calories='+calories+'&duration='+duration;
-////initialize variables for storing data recieved from API
-// var recipeIds =[];
-// var recipeTitle =[];
-// var instructions =[];
-////first ajax call
-// $.ajax({
-//   url: firstqueryURL,
-//   method: "GET",
-//   dataType :'json',
-//   contentType:'application/json',
-//   headers: {
-//     'X-MashApe-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
-//     'Accept': 'application/json',
-//   }
-// }).done(function(response) {
-//  //console log returned response 
-//  console.log(response);
-//  //loop through response.items array
-//  for (let i = 0; i < response.items.length; i++) {
-    ////parse the json object indexed at response.item[i].value this turns it from a json object to a javascript object we can use
-//    var valueParsed = JSON.parse(response.items[i].value);
-    ////set values
-//    recipeIds[i] = valueParsed.id;
-//    recipeTitle[i] = valueParsed.title;
+//values hard coded that will be used for food-recipe-nutrition api calls
+var diet = "vegan";
+var exclude = "dairy";
+var calories = 2000;
+var duration = "day";
+//build api Query Url with hard coded search criteria
+var firstqueryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet='+diet+'&exclude='+exclude+'&calories='+calories+'&duration='+duration;
+//initialize variables for storing data recieved from API
+var recipeIds =[];
+var recipeTitle =[];
+var instructions =[];
+//first ajax call
+$.ajax({
+  url: firstqueryURL,
+  method: "GET",
+  dataType :'json',
+  contentType:'application/json',
+  headers: {
+    'X-MashApe-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
+    'Accept': 'application/json',
+  }
+}).done(function(response) {
+ //console log returned response 
+ console.log(response);
+ //loop through response.items array
+ for (let i = 0; i < response.items.length; i++) {
+    //parse the json object indexed at response.item[i].value this turns it from a json object to a javascript object we can use
+   var valueParsed = JSON.parse(response.items[i].value);
+    //set values
+   recipeIds[i] = valueParsed.id;
+   recipeTitle[i] = valueParsed.title;
     //set id equal to id value of current index
-//    var id = recipeIds[i];
-    ////build second api call query with id
-//    var secondqueryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/informationBulk?ids="+ id;
-    ////second ajax call
-//    $.ajax({
-//      url: secondqueryURL,
-//      method: "GET",
-//      dataType :'json',
-//      contentType:'application/json',
-//      headers: {
-//        'X-Mashape-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
-//        'Accept': 'application/json'
-//      }
-//    }).done(function(response) {
-      ////init variables for data to be collected from second call
-//      let mealIngredients = [];
-//      let ingredients = [];
-      ///loop through second call response[0].extendedIngredients
-//      for (let j = 0; j<response[0].extendedIngredients.length; j++){
+   var id = recipeIds[i];
+    //build second api call query with id
+   var secondqueryURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/informationBulk?ids="+ id;
+    //second ajax call
+   $.ajax({
+     url: secondqueryURL,
+     method: "GET",
+     dataType :'json',
+     contentType:'application/json',
+     headers: {
+       'X-Mashape-Key': "GgZnHbiCEBmshGzT8g37bSZFy5BFp1iIqh2jsnWgLcG2L1F9jx",
+       'Accept': 'application/json'
+     }
+   }).done(function(response) {
+      //init variables for data to be collected from second call
+     let mealIngredients = [];
+     let ingredients = [];
+      //loop through second call response[0].extendedIngredients
+     for (let j = 0; j<response[0].extendedIngredients.length; j++){
         //builds ingredients objects that are put into ingredients array at [j] index
-//        let mealIngredient = {
-//          "id": response[0].extendedIngredients[j].id,
-//          "name": response[0].extendedIngredients[j].name
-//        };
+       let mealIngredient = {
+         "id": response[0].extendedIngredients[j].id,
+         "name": response[0].extendedIngredients[j].name
+       };
 
-//        ingredients[j] = mealIngredient;
+       ingredients[j] = mealIngredient;
 
-//      };
+     };
 
       //build recipe object from data collected, this will be pushed to google firebase one recipe at a time
-//      let recipe = {
-//        title: recipeTitle[i],
-//        recipeId: recipeIds[i],
-//        ingredients,
-//        instructions: response[0].instructions
-//      };
+     let recipe = {
+       title: recipeTitle[i],
+       recipeId: recipeIds[i],
+       ingredients,
+       instructions: response[0].instructions
+     };
 
-      ////this console logs out the recipe objects that are to be sent to google firebase for validation of data structure
-//      console.log("recipe",recipe);
+      //this console logs out the recipe objects that are to be sent to google firebase for validation of data structure
+     console.log("recipe",recipe);
 
         
-//    });
+   });
 
-//  };
+ };
 
-// });
+});
 //**********************************************Working Code Above Don't Change*******************************************************
 
 
