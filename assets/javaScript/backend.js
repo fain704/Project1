@@ -20,7 +20,6 @@
 
   }
 
-// firebase.auth().languageCode = 'pt';
 // To apply the default browser preference instead of explicitly setting it.
 firebase.auth().useDeviceLanguage();
 
@@ -78,37 +77,25 @@ firebase.auth().signOut().then(function() {
 }).catch(function(error) {
   // An error happened.
 });
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$("#login").on("click",Auth)
-
-//*************************************Working Code Below Don't Change***********************************************************
-
-//values hard coded that will be used for food-recipe-nutrition api calls
 var diet;
 var exclude;
 var calories;
 var duration;
 var mealplan = [];
 
-$("#submit").on("click", function(){
-  diet = $("#diet").val();
-  exclude = $("#exclude").val();
-  calories = $("#calories").val();
-  duration = $("#duration").val();
+// function walmart(name){
 
-  exclude = exclude.toString();
-  diet = diet[0];
+//   var thirdqueryURL = "http://api.walmartlabs.com/v1/search?format=json&callback=product&apiKey=ybnhuvuf44ajn4txptrpedm4&query="+name;
 
-  console.log("diet", diet);
-  console.log("exclude", exclude);
-  console.log("calories", calories);
-  console.log("duration", duration);
-  
-  // console.log(user);
-  foodRecipeNutrition(diet, exclude, calories, duration);
+//   $.ajax({
+//     url: thirdqueryURL,
+//     method:"GET",
+//     dataType: "jsonp"
+//   });
+// };
 
-
-})
 
 function foodRecipeNutrition(diet,exclude,calories,duration){
   // //build api Query Url with hard coded search criteria
@@ -175,24 +162,76 @@ function foodRecipeNutrition(diet,exclude,calories,duration){
          instructions: response[0].instructions
        };
 
+        let titlerow = $("<div>");
+        titlerow.addClass("row");
+        let title = $("<div>");
+        title.addClass("col-12")
+        title.html(recipe.title);
+        titlerow.append(title);
+
+        //create instruction row and column and add instruction to column html, then append instruction to instruction row
+        let instructionrow = $("<div>");
+        instructionrow.addClass("row");
+        let instructioncol = $("<div>");
+        instructioncol.addClass("col-12");
+        instructioncol.html(recipe.instructions);
+        instructionrow.append(instructioncol);
+
+        //create ingredient row and col that all ingredients for recipe with go into;
+        let ingredientrow = $("<div>");
+        ingredientrow.addClass("row");
+        let ingredientcol = $("<div>");
+        instructioncol.addClass("col-12");
+
+        for (let j = 0; j < recipe.ingredients.length; j++){
+          let ingredient = $("<p>");
+          ingredientcol.append(ingredient);
+          ingredient.on("click", function(){
+            let name = $(this).html();
+            walmart(name);
+          });
+        }
+
+        $("#recipebox").append(titlerow);
+        $("#recipebox").append(instructionrow);
+        $("#recipebox").append(ingredientrow);
+
         //this console logs out the recipe objects that are to be sent to google firebase for validation of data structure
        // console.log("recipe",recipe);
-       mealplan.push(recipe);
-       
-
-          
+       mealplan.push(recipe);  
      });
-
    };
 
+
   });
-  // console.log(mealplan);
-  user["meals"] = mealplan;
-  firebase.database().ref("users/"+(user.uid)).update(user);
-  // console.log(user);
+  console.log(mealplan);
 };
+
+
 //**********************************************Working Code Above Don't Change*******************************************************
 
+
+$("#login").on("click", Auth);
+
+$("#submit").on("click", function(){
+  diet = $("#diet").val();
+  exclude = $("#exclude").val();
+  calories = $("#calories").val();
+  duration = $("#duration").val();
+
+  exclude = exclude.toString();
+  diet = diet[0];
+
+  console.log("diet", diet);
+  console.log("exclude", exclude);
+  console.log("calories", calories);
+  console.log("duration", duration);
+  
+  // console.log(user);
+  foodRecipeNutrition(diet, exclude, calories, duration);
+
+  });
+ 
 
 
 //// initialiaze value for grocery list
@@ -226,14 +265,3 @@ function foodRecipeNutrition(diet,exclude,calories,duration){
 //     walmart(groceryList[i]);
 //   }
 // }
-
-// function walmart(name){
-
-//   var thirdqueryURL = "http://api.walmartlabs.com/v1/search?format=json&callback=product&apiKey=ybnhuvuf44ajn4txptrpedm4&query="+name;
-
-//   $.ajax({
-//     url: thirdqueryURL,
-//     method:"GET",
-//     dataType: "jsonp"
-//   });
-// };
