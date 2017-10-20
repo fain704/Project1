@@ -22,7 +22,7 @@
           <div class="form-group">
               <label class="control-label dropdown-label" for="rolename">Dietary Types</label>
                 <div class="dropdown-custom">
-                    <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
+                    <select id="diet" class="multiselect-ui form-control" multiple="multiple">
                         <option value="vegetarian">Vegetarian</option>
                         <option value="vegan">Vegan</option>
                         <option value="glutenFree">Gluten Free</option>
@@ -44,27 +44,27 @@
           <div class="form-group">
             <label class="control-label dropdown-label" for="rolename">Alergies</label>
               <div class="dropdown-custom">
-                  <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
-                      <option value="Peanut">Peanut</option>
-                      <option value="Soy">Soy</option>
-                      <option value="Egg Whites">Egg Whites</option>
-                      <option value="Milk">Milk</option>
-                      <option value="Gluten">Gluten</option>
-                      <option value="Yeast">Yeast</option>
-                      <option value="CashewNut">Cashew Nut</option>
-                      <option value="EggYolk">Egg Yolk</option>
-                      <option value="Garlic">Garlic</option>
-                      <option value="SoyBean">Soy Bean</option>
-                      <option value="BrazilNut">Brazil Nut</option>
-                      <option value="Almonds">Almonds</option>
-                      <option value="Corn">Corn</option>
-                      <option value="HazelNut">Hazel Nut</option>
-                      <option value="Oats">Oats</option>
-                      <option value="Lentils">Lentils</option>
-                      <option value="KiwiFruit">Kiwi Fruit</option>
-                      <option value="ChilliPeppers">Chilli Peppers</option>
-                      <option value="SesameSeed">Sesame Seed</option>
-                      <option value="SunflowerSeed">Sunflower Seed</option>
+                  <select id="exclude" class="multiselect-ui form-control" multiple="multiple">
+                      <option value="peanut">Peanut</option>
+                      <option value="soy">Soy</option>
+                      <option value="egg Whites">Egg Whites</option>
+                      <option value="milk">Milk</option>
+                      <option value="gluten">Gluten</option>
+                      <option value="yeast">Yeast</option>
+                      <option value="cashewNut">Cashew Nut</option>
+                      <option value="eggYolk">Egg Yolk</option>
+                      <option value="garlic">Garlic</option>
+                      <option value="soyBean">Soy Bean</option>
+                      <option value="brazilNut">Brazil Nut</option>
+                      <option value="almonds">Almonds</option>
+                      <option value="corn">Corn</option>
+                      <option value="hazelNut">Hazel Nut</option>
+                      <option value="oats">Oats</option>
+                      <option value="lentils">Lentils</option>
+                      <option value="kiwiFruit">Kiwi Fruit</option>
+                      <option value="chilliPeppers">Chilli Peppers</option>
+                      <option value="sesameSeed">Sesame Seed</option>
+                      <option value="sunflowerSeed">Sunflower Seed</option>
                   </select>
             </div>
         </div>
@@ -93,7 +93,7 @@
 
         <div class="form-group calories">
           <label for="sel1">Calories</label>
-          <select class="form-control" id="sel1">
+          <select class="form-control" id="calories">
             <option value="1000">1000</option>
             <option value="1100">1100</option>
             <option value="1200">1200</option>
@@ -169,9 +169,9 @@
 
 <div class = "dropdown">
  <label for="sel1">Day or Week</label>
-          <select class="form-control" id="sel1">
-            <option value="Day">Day</option>
-            <option value="Week">Week</option>
+          <select class="form-control" id="duration">
+            <option value="day">Day</option>
+            <option value="week">Week</option>
           </select>
         </dic>
 
@@ -188,7 +188,7 @@
           <br>
           <br>
 
-          <input type="submit" value="Submit" class="submitBtn">
+          <input type="submit" value="Submit" class="submitBtn" id="submit">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
