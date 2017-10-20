@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,112 +9,71 @@
         <link rel="author" href="humans.txt">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-
-
     </head>
     <body>
 
 
         <h1>Next Generation Health</h1>
 
-        <!-- Dropdown Calories Count Menu -->
+              <br>
 
-        <script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
-        <!-- End Dropdown Calories Count Menu -->
-
-          <!-- Multi Dropdown Menu -->
+              <!-- Multi Dropdown Menu -->
           <div class="form-group">
-            <label class="col-md-4 control-label" for="rolename">Alergies</label>
-            <div class="col-md-4">
-                <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
-                    <option value="Peanut">Peanut</option>
-                    <option value="Soy">Soy</option>
-                    <option value="Egg Whites">Egg Whites</option>
-                    <option value="Milk">Milk</option>
-                    <option value="Gluten">Gluten</option>
-                    <option value="Yeast">Yeast</option>
-                    <option value="CashewNut">Cashew Nut</option>
-                    <option value="EggYolk">Egg Yolk</option>
-                    <option value="Garlic">Garlic</option>
-                    <option value="SoyBean">Soy Bean</option>
-                    <option value="BrazilNut">Brazil Nut</option>
-                    <option value="Almonds">Almonds</option>
-                    <option value="Corn">Corn</option>
-                    <option value="HazelNut">Hazel Nut</option>
-                    <option value="Oats">Oats</option>
-                    <option value="Lentils">Lentils</option>
-                    <option value="KiwiFruit">Kiwi Fruit</option>
-                    <option value="ChilliPeppers">Chilli Peppers</option>
-                    <option value="SesameSeed">Sesame Seed</option>
-                    <option value="SunflowerSeed">Sunflower Seed</option>
+              <label class="control-label dropdown-label" for="rolename">Dietary Types</label>
+                <div class="dropdown-custom">
+                    <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="glutenFree">Gluten Free</option>
+                        <option value="dairyFree">Dairy Free</option>
+                        <option value="veryHealthy">Very Healthy</option>
+                        <option value="cheap">Cheap</option>
+                        <option value="veryPopular">Very Popular</option>
+                        <option value="sustainable">Sustainable</option>
+                        <option value="lowFodmap">Low Fodmap</option>
+                        <option value="ketogenic">Ketogenic</option>
+                        <option value="whole30">Whole 30</option>
+                        <option value="paleo">Paleo</option>
+                    </select>
+                </div>
+            </div>
 
+            <br>
 
-
-                </select>
+          <div class="form-group">
+            <label class="control-label dropdown-label" for="rolename">Alergies</label>
+              <div class="dropdown-custom">
+                  <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
+                      <option value="Peanut">Peanut</option>
+                      <option value="Soy">Soy</option>
+                      <option value="Egg Whites">Egg Whites</option>
+                      <option value="Milk">Milk</option>
+                      <option value="Gluten">Gluten</option>
+                      <option value="Yeast">Yeast</option>
+                      <option value="CashewNut">Cashew Nut</option>
+                      <option value="EggYolk">Egg Yolk</option>
+                      <option value="Garlic">Garlic</option>
+                      <option value="SoyBean">Soy Bean</option>
+                      <option value="BrazilNut">Brazil Nut</option>
+                      <option value="Almonds">Almonds</option>
+                      <option value="Corn">Corn</option>
+                      <option value="HazelNut">Hazel Nut</option>
+                      <option value="Oats">Oats</option>
+                      <option value="Lentils">Lentils</option>
+                      <option value="KiwiFruit">Kiwi Fruit</option>
+                      <option value="ChilliPeppers">Chilli Peppers</option>
+                      <option value="SesameSeed">Sesame Seed</option>
+                      <option value="SunflowerSeed">Sunflower Seed</option>
+                  </select>
             </div>
         </div>
 
-                    <!-- Multi DropDwon End -->
-
-                    <!-- Multi DropDown Start Diets -->
-
-                              <div class="form-group">
-            <label class="col-md-4 control-label" for="rolename">Alergies</label>
-            <div class="col-md-4">
-                <select id="dates-field2" class="multiselect-ui form-control" multiple="multiple">
-                    <option value="Peanut">Peanut</option>
-                    <option value="Soy">Soy</option>
-                    <option value="Egg Whites">Egg Whites</option>
-                    <option value="Milk">Milk</option>
-                    <option value="Gluten">Gluten</option>
-                    <option value="Yeast">Yeast</option>
-                    <option value="CashewNut">Cashew Nut</option>
-                    <option value="EggYolk">Egg Yolk</option>
-                    <option value="Garlic">Garlic</option>
-                    <option value="SoyBean">Soy Bean</option>
-                    <option value="BrazilNut">Brazil Nut</option>
-                    <option value="Almonds">Almonds</option>
-                    <option value="Corn">Corn</option>
-                    <option value="HazelNut">Hazel Nut</option>
-                    <option value="Oats">Oats</option>
-                    <option value="Lentils">Lentils</option>
-                    <option value="KiwiFruit">Kiwi Fruit</option>
-                    <option value="ChilliPeppers">Chilli Peppers</option>
-                    <option value="SesameSeed">Sesame Seed</option>
-                    <option value="SunflowerSeed">Sunflower Seed</option>
-
-
-
-                </select>
-            </div>
-        </div>
-
-        <!-- Multi DropDown Diets End -->
+        <!-- Multi DropDown End-->
 
 
         <!-- Dropdown Link -->
 
-        <div class=“dropdown show”>
+        <!-- <div class=“dropdown show”>
           <a class=“btn btn-secondary dropdown-toggle” href=“https://example.com” id=“dropdownMenuLink” data-toggle=“dropdown” aria-haspopup=“true” aria-expanded=“false”>
             Dropdown link
           </a>
@@ -124,12 +83,13 @@ window.onclick = function(event) {
             <a class=“dropdown-item” href=“#”>Another action</a>
             <a class=“dropdown-item” href=“#”>Something else here</a>
           </div>
-        </div>
+        </div> -->
 
 
+          <!-- Dropdown Calories Count Menu -->
+          <br>
 
-
-        <div class="dropdown" style="float:left;">
+        <div class="dropdown">
           <button class="dropbtn">Calories</button>
           <div class="dropdown-content" style="left:0;">
             <a href="#">1000</a>
@@ -164,41 +124,27 @@ window.onclick = function(event) {
             <a href="#">4000</a>
           </div>
         </div>
-        <!-- End Dropdown Link -->
 
+          <br>
+          <br>
 
+        <div class="dayWeek">
+          <button class="weekbtn">Timeframe</button>
+          <div class="dayWeek-content" style="left:0;">
+            <a href="#">Day</a>
+            <a href="#">Week</a>
+          </div>
+        </div>
 
+          <br>
+          <br>
 
-
+          <input type="submit" value="Submit" class="submitBtn">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="assets/javaScript/main.js"></script>
 
-        <script type="text/javascript">
-
-
-            $(document).ready(function() {
-
-
-                $('.multiselect-ui').multiselect({
-                    onChange: function(option, checked) {
-                        // Get selected options.
-                        var selectedOptions = $('.multiselect-ui option:selected',this);
-
-
-                            $('.multiselect-ui option', this).each(function() {
-                                var input = $('input[value="' + $(this).val() + '"]',this);
-                                input.prop('disabled', false);
-                                input.parent('li').addClass('disabled');
-                            });
-                    }
-                });
-
-            });
-
-
-        </script>
 
     </body>
 </html>

@@ -1,8 +1,64 @@
 h1{
-	text-align: center;
+
+
+		text-align: center;
 
 }
+/*body{
+     margin: 0;
+     background: url("nextGenHealthBackground.jpg");
+     background-size: 1440px 800px;
+     background-repeat:no-repeatdisplay: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+}*/
+
+body {
+	background-image: url("nextGenHealthBackground.jpg");
+	background-color: #CDEED1;
+}
+
+.dropdown-custom  button{
+	background-color: #4CAF50;
+	color: white;
+	width:300px;
+	height:100%;
+	position:relative;
+	display: block; margin: 0 auto;
+}
+
+.dropdown-label {
+	width: 100%;
+	text-align: center;
+}
+
+.dropdown-custom:hover button{
+    background-color: #3e8e41;
+		color: white;
+}
+
+.dropdown-custom:hover.multiselect.btn {
+    display: block;
+}
+
+/*body > div:nth-child(2) > div > span > div > button {
+	background-color: #4CAF50;
+	color: white;
+  width:300px;
+  height:100%;
+  position:relative;
+	display: block; margin: 0 auto;
+}
+
+body > div:nth-child(3) > div > span > div > button {
+	background-color: #4CAF50;
+	color: white;
+	width:300px;
+	height:100%;
+	position:relative;
+	text-align: center;
+	display: block; margin: 0 auto;
+}*/
 
 span.multiselect-native-select {
 	position: relative
@@ -12,15 +68,16 @@ span.multiselect-native-select select {
 	clip: rect(0 0 0 0)!important;
 	height: 1px!important;
 	margin: -1px -1px -1px -3px!important;
-	overflow: hidden!important;
+	overflow-x:scroll;
 	padding: 0!important;
 	position: absolute!important;
 	width: 1px!important;
 	left: 50%;
 	top: 30px
+
 }
 .multiselect-container {
-	position: absolute;
+	position: relative;
 	list-style-type: none;
 	margin: 0;
 	padding: 0
@@ -61,7 +118,7 @@ span.multiselect-native-select select {
 }
 .btn-group>.btn-group:nth-child(2)>.multiselect.btn {
 	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px
+	border-bottom-left-radius: 4px;
 }
 .form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio {
 	padding: 3px 20px 3px 40px
@@ -69,4 +126,103 @@ span.multiselect-native-select select {
 .form-inline .multiselect-container li a label.checkbox input[type=checkbox], .form-inline .multiselect-container li a label.radio input[type=radio] {
 	margin-left: -20px;
 	margin-right: 0
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+		width 100%;
+		text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+		height:500px;
+		overflow-x:scroll;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+
+}
+
+.weekbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dayWeek {
+    position: relative;
+		width 100%;
+		text-align: center;
+}
+
+.dayWeek-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+		height:500px;
+		overflow-x:scroll;
+}
+
+.dayWeek-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dayWeek-content a:hover {background-color: #f1f1f1}
+
+.dayWeek:hover .dayWeek-content {
+    display: block;
+}
+
+.dayWeek:hover .weekbtn {
+    background-color: #3e8e41;
+
+}
+
+.submitBtn {
+    background-color: #66AACC;
+		color: white;
+		padding: 12px 16px;
+		position: absolute;
+		right: 0;
+
 }
