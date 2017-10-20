@@ -1,3 +1,5 @@
+var firstGlobalSelector 
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -33,6 +35,13 @@ $(document).ready(function() {
                 });
         }
     });
+
+    /*
+    $('.dropdown-content a').on("click", function() {
+        $(this).toggleClass("item-selected");
+        //You need to keep track of which items are selected here.
+    });
+    */
 
 });
 

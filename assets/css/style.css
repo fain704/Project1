@@ -16,6 +16,13 @@ h1{
 body {
 	background-image: url("nextGenHealthBackground.jpg");
 	background-color: #CDEED1;
+	text-align: center;
+}
+
+.calories {
+	width: 100%;
+	max-width: 200px;
+	margin: auto;
 }
 
 .dropdown-custom  button{
@@ -37,8 +44,14 @@ body {
 		color: white;
 }
 
+/*
 .dropdown-custom:hover.multiselect.btn {
     display: block;
+}
+*/
+
+.dropdown-content a.item-selected {
+	background-color: yellow;
 }
 
 /*body > div:nth-child(2) > div > span > div > button {
@@ -139,8 +152,8 @@ span.multiselect-native-select select {
 
 .dropdown {
     position: relative;
-		width 100%;
-		text-align: center;
+	display: inline-block;
+	text-align: center;
 }
 
 .dropdown-content {
@@ -164,14 +177,18 @@ span.multiselect-native-select select {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
+/*
 .dropdown:hover .dropdown-content {
     display: block;
 }
+*/
 
+/*
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 
 }
+*/
 
 .weekbtn {
     background-color: #4CAF50;
