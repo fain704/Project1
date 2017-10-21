@@ -133,91 +133,18 @@ $(document).on("click", ".recipe", function() {
 
 $(document).on("click", ".ingredient", function() {
       var name = $(this).data("name");
-      alert(name);
+
       var thirdqueryURL = "http://api.walmartlabs.com/v1/search?format=json&callback=product&apiKey=ybnhuvuf44ajn4txptrpedm4&query="+ name;
+
 
   $.ajax({
     url: thirdqueryURL,
     method:"GET",
     dataType: "jsonp"
   }).done(function(response) {
-    console.log(response);
-  });
+function product(data){
+  console.log(data);
+}  
 });
 
-
-// solution: run first and second ajax calls seperately, fill container with buttons of recipe titles/ids from first call,
-// and on click of button execute second ajax call with id attached as data of recipe button, and on completion of the second call, fill the container
-// with data retrieved from second call, then if user wants to know cost of ingredient at walmart they can click the ingredient and the walmart call will fire
-
-// 
-
-//         //build recipe object from data collected, this will be pushed to google firebase one recipe at a time
-//        let recipe = {
-//          title: recipeTitle[i],
-//          recipeId: recipeIds[i],
-//          ingredients,
-//          instructions: response[0].instructions
-//        };
-
-//create instruction row and column and add instruction to column html, then append instruction to instruction row
-// let instructionrow = $("<div>");
-// instructionrow.addClass("row");
-// let instructioncol = $("<div>");
-// instructioncol.addClass("col-12");
-// instructioncol.html(recipe.instructions);
-// instructionrow.append(instructioncol);
-
-//         //create ingredient row and col that all ingredients for recipe with go into;
-//         let ingredientrow = $("<div>");
-//         ingredientrow.addClass("row");
-//         let ingredientcol = $("<div>");
-//         instructioncol.addClass("col-12");
-
-//         for (let j = 0; j < recipe.ingredients.length; j++){
-//           let ingredient = $("<p>");
-//           ingredientcol.append(ingredient);
-//           ingredient.on("click", function(){
-//             let name = $(this).html();
-//             walmart(name);
-//           });
-//         }
-
-//         $("#recipebox").append(titlerow);
-//         $("#recipebox").append(instructionrow);
-//         $("#recipebox").append(ingredientrow);
-
-//         //this console logs out the recipe objects that are to be sent to google firebase for validation of data structure
-//        // console.log("recipe",recipe);
-//        mealplan.push(recipe);  
-
-//// initialiaze value for grocery list
-// var groceryList = [];
-
-// //loop through ingredients of each firebase recipe object and add to the array if it doesn't already exist or if the ingredient is water.
-// for (let i = 0; i < firebaseMealObject.length; i++) {
-//   for (let j = 0; j < firebaseMealObject[i].ingredients.length; j++) {
-
-//     if (groceryList.indexOf(firebaseMealObject[i].ingredients[j].name) === -1 && firebaseMealObject[i].ingredients[j].name !=="water"){
-
-//       groceryList[(j*i)+j] = firebaseMealObject[i].ingredients[j].name;
-//       console.log(groceryList[j]);
-
-//     }
-
-//   }
-// }
-// //filters grocery list so that undefined index values are removed
-// groceryList = groceryList.filter(i=>i);
-
-// var i = 0;
-
-// walmart(groceryList[i]);
-// console.log("length",groceryList);
-
-// function product(data){
-//   console.log(data);
-//   if(++i < groceryList.length) {
-//     walmart(groceryList[i]);
-//   }
-// }
+});
