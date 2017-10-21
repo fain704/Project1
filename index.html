@@ -11,105 +11,109 @@
     </head>
     <body>
         <h1>Next Generation Health</h1>
-        <button id="login">Login</button>
+        <!--         <button id="login">Login</button>
+ -->
         <br>
         <!-- Multi Dropdown Menu -->
-        <div class="form-group">
-            <label class="control-label dropdown-label" for="rolename">Dietary Types</label>
-            <div class="dropdown-custom">
-                <select id="diet" class="multiselect-ui form-control" multiple="multiple">
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="glutenFree">Gluten Free</option>
-                    <option value="dairyFree">Dairy Free</option>
-                    <option value="veryHealthy">Very Healthy</option>
-                    <option value="cheap">Cheap</option>
-                    <option value="veryPopular">Very Popular</option>
-                    <option value="sustainable">Sustainable</option>
-                    <option value="lowFodmap">Low Fodmap</option>
-                    <option value="ketogenic">Ketogenic</option>
-                    <option value="whole30">Whole 30</option>
-                    <option value="paleo">Paleo</option>
-                </select>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="control-label dropdown-label" for="rolename">Dietary Types</label>
+                    <div class="dropdown-custom">
+                        <select id="diet" class="multiselect-ui form-control" multiple="multiple">
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="glutenFree">Gluten Free</option>
+                            <option value="dairyFree">Dairy Free</option>
+                            <option value="veryHealthy">Very Healthy</option>
+                            <option value="cheap">Cheap</option>
+                            <option value="veryPopular">Very Popular</option>
+                            <option value="sustainable">Sustainable</option>
+                            <option value="lowFodmap">Low Fodmap</option>
+                            <option value="ketogenic">Ketogenic</option>
+                            <option value="whole30">Whole 30</option>
+                            <option value="paleo">Paleo</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="control-label dropdown-label" for="rolename">Alergies</label>
+                    <div class="dropdown-custom">
+                        <select id="exclude" class="multiselect-ui form-control" multiple="multiple">
+                            <option value="peanut">Peanut</option>
+                            <option value="soy">Soy</option>
+                            <option value="egg Whites">Egg Whites</option>
+                            <option value="milk">Milk</option>
+                            <option value="gluten">Gluten</option>
+                            <option value="yeast">Yeast</option>
+                            <option value="cashewNut">Cashew Nut</option>
+                            <option value="eggYolk">Egg Yolk</option>
+                            <option value="garlic">Garlic</option>
+                            <option value="soyBean">Soy Bean</option>
+                            <option value="brazilNut">Brazil Nut</option>
+                            <option value="almonds">Almonds</option>
+                            <option value="corn">Corn</option>
+                            <option value="hazelNut">Hazel Nut</option>
+                            <option value="oats">Oats</option>
+                            <option value="lentils">Lentils</option>
+                            <option value="kiwiFruit">Kiwi Fruit</option>
+                            <option value="chilliPeppers">Chilli Peppers</option>
+                            <option value="sesameSeed">Sesame Seed</option>
+                            <option value="sunflowerSeed">Sunflower Seed</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group calories">
+                    <label for="sel1">Calories</label>
+                    <select class="form-control" id="calories">
+                        <option value="1000">1000</option>
+                        <option value="1100">1100</option>
+                        <option value="1200">1200</option>
+                        <option value="1300">1300</option>
+                        <option value="1400">1400</option>
+                        <option value="1500">1500</option>
+                        <option value="1600">1600</option>
+                        <option value="1700">1700</option>
+                        <option value="1800">1800</option>
+                        <option value="1900">1900</option>
+                        <option value="2000" selected>2000</option>
+                        <option value="2100">2100</option>
+                        <option value="2200">2200</option>
+                        <option value="2300">2300</option>
+                        <option value="2400">2400</option>
+                        <option value="2600">2600</option>
+                        <option value="2700">2700</option>
+                        <option value="2800">2800</option>
+                        <option value="2900">2900</option>
+                        <option value="3000">3000</option>
+                        <option value="3100">3100</option>
+                        <option value="3200">3200</option>
+                        <option value="3300">3300</option>
+                        <option value="3400">3400</option>
+                        <option value="3500">3500</option>
+                        <option value="3600">3600</option>
+                        <option value="3700">3700</option>
+                        <option value="3800">3800</option>
+                        <option value="3900">3900</option>
+                        <option value="4000">4000</option>
+                    </select>
+                </div>
+                <br>
+                <div class="dropdown">
+                    <label for="sel1">Day or Week</label>
+                    <select class="form-control" id="duration">
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                    </select>
+                    
+                    <button class="btn btn-success submitBtn" id="submit">Submit</button>
+                </div>
             </div>
         </div>
         <br>
-        <div class="form-group">
-            <label class="control-label dropdown-label" for="rolename">Alergies</label>
-            <div class="dropdown-custom">
-                <select id="exclude" class="multiselect-ui form-control" multiple="multiple">
-                    <option value="peanut">Peanut</option>
-                    <option value="soy">Soy</option>
-                    <option value="egg Whites">Egg Whites</option>
-                    <option value="milk">Milk</option>
-                    <option value="gluten">Gluten</option>
-                    <option value="yeast">Yeast</option>
-                    <option value="cashewNut">Cashew Nut</option>
-                    <option value="eggYolk">Egg Yolk</option>
-                    <option value="garlic">Garlic</option>
-                    <option value="soyBean">Soy Bean</option>
-                    <option value="brazilNut">Brazil Nut</option>
-                    <option value="almonds">Almonds</option>
-                    <option value="corn">Corn</option>
-                    <option value="hazelNut">Hazel Nut</option>
-                    <option value="oats">Oats</option>
-                    <option value="lentils">Lentils</option>
-                    <option value="kiwiFruit">Kiwi Fruit</option>
-                    <option value="chilliPeppers">Chilli Peppers</option>
-                    <option value="sesameSeed">Sesame Seed</option>
-                    <option value="sunflowerSeed">Sunflower Seed</option>
-                </select>
-            </div>
-        </div>
         <br>
-        <div class="form-group calories">
-            <label for="sel1">Calories</label>
-            <select class="form-control" id="calories">
-                <option value="1000">1000</option>
-                <option value="1100">1100</option>
-                <option value="1200">1200</option>
-                <option value="1300">1300</option>
-                <option value="1400">1400</option>
-                <option value="1500">1500</option>
-                <option value="1600">1600</option>
-                <option value="1700">1700</option>
-                <option value="1800">1800</option>
-                <option value="1900">1900</option>
-                <option value="2000" selected>2000</option>
-                <option value="2100">2100</option>
-                <option value="2200">2200</option>
-                <option value="2300">2300</option>
-                <option value="2400">2400</option>
-                <option value="2600">2600</option>
-                <option value="2700">2700</option>
-                <option value="2800">2800</option>
-                <option value="2900">2900</option>
-                <option value="3000">3000</option>
-                <option value="3100">3100</option>
-                <option value="3200">3200</option>
-                <option value="3300">3300</option>
-                <option value="3400">3400</option>
-                <option value="3500">3500</option>
-                <option value="3600">3600</option>
-                <option value="3700">3700</option>
-                <option value="3800">3800</option>
-                <option value="3900">3900</option>
-                <option value="4000">4000</option>
-            </select>
-        </div>
-        <br>
-        <br>
-        <div class="dropdown">
-            <label for="sel1">Day or Week</label>
-            <select class="form-control" id="duration">
-                <option value="day">Day</option>
-                <option value="week">Week</option>
-            </select>
-            <input type="submit" value="Submit" class="submitBtn" id="submit">
-        </div>
-        <br>
-        <br>
-        
         <div class="containter" id="recipebox"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
